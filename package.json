@@ -1,0 +1,20 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc src/*.ts --target ES5 --outFile dist/bundle.js",
+    "autotsc": "tsc --watch src/*.ts --target ES5 --outFile dist/bundle.js",
+    "build-dev": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --hot --inline --colors --progress --content-base src/",
+    "build-prod": "webpack -p && cp src/index.html dist/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^1.2.0",
+    "typescript": "^2.0.8",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
